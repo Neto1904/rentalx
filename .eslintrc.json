@@ -1,7 +1,8 @@
 {
     "env": {
         "es2021": true,
-        "node": true
+        "node": true,
+		"jest/globals": true
     },
     "extends": [
         "standard",
@@ -52,7 +53,7 @@
 		{
 		  // example configuration
 		  "newlinesBetween": "always",
-		  "groups": ["module", "/^@shared/", ["parent", "sibling", "index"]],
+		  "groups": ["module", "/^@/", ["parent", "sibling", "index"]],
 		  "alphabetize": { "order": "asc", "ignoreCase": true }
 		}
 	  ],
