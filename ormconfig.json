@@ -7,12 +7,12 @@
     "port":5433,
     "logging": true,
     "migrations": [
-        "./src/database/migrations/*.ts"
+        "./src/shared/infra/typeorm/migrations/*.ts"
     ],
     "entities": [
         "./src/modules/**/*.ts"
     ],
     "cli":{
-        "migrationsDir": "./src/database/migrations"
+        "migrationsDir": "./src/shared/infra/typeorm/migrations"
     }
 }
