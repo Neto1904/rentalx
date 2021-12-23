@@ -2,8 +2,9 @@
  * For a detailed explanation regarding each configuration property and type check, visit:
  * https://jestjs.io/docs/configuration
  */
-import { pathsToModuleNameMapper } from "ts-jest/utils";
-import { compilerOptions } from "./tsconfig.json";
+import { pathsToModuleNameMapper } from 'ts-jest/utils'
+
+import { compilerOptions } from './tsconfig.json'
 export default {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
@@ -32,7 +33,7 @@ export default {
   // ],
 
   // Indicates which provider should be used to instrument code for coverage
-  coverageProvider: "v8",
+  coverageProvider: 'v8',
 
   // A list of reporter names that Jest uses when writing coverage reports
   // coverageReporters: [
@@ -82,9 +83,9 @@ export default {
   // ],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
-     prefix: '<rootDir>/src/'
-   }),
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
+    prefix: '<rootDir>/src/',
+  }),
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],
@@ -96,7 +97,7 @@ export default {
   // notifyMode: "failure-change",
 
   // A preset that is used as a base for Jest's configuration
-   preset: 'ts-jest',
+  preset: 'ts-jest',
 
   // Run tests from one or more projects
   // projects: undefined,
@@ -194,4 +195,4 @@ export default {
 
   // Whether to use watchman for file crawling
   // watchman: true,
-};
+}
