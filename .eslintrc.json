@@ -17,8 +17,8 @@
     "plugins": [
         "@typescript-eslint",
         "eslint-plugin-import-helpers",
-		"prettier"
-
+		"prettier",
+		"jest"
     ],
     "rules": {
       "camelcase": [2, {"properties": "always"}],
