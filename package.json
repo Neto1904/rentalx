@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn src/shared/infra/http/server.ts",
     "lint:fix": "eslint --fix . --ext ts,tsx",
-    "test": "NODE_ENV=test jest --runInBand",
+    "test": "NODE_ENV=test jest --runInBand --detectOpenHandles",
     "typeorm": "ts-node-dev --transpile-only -r tsconfig-paths/register ./node_modules/typeorm/cli",
     "seed:admin": "ts-node-dev --transpile-only -r tsconfig-paths/register src/shared/infra/typeorm/seed/admin.ts"
   },
