@@ -5,7 +5,7 @@
     "password": "ignite",
     "database": "rentx",
     "port":5433,
-    "logging": true,
+    "logging": false,
     "migrations": [
         "./src/shared/infra/typeorm/migrations/*.ts"
     ],
