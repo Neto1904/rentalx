@@ -1,0 +1,1245 @@
+{
+    "swagger": "2.0",
+    "info": {
+    "title": "ORDS generated API for hidro",
+    "version": "1.0.0"
+    },
+    "host": "ows.snirh.gov.br",
+    "basePath": "/ords/prd12/ords_ana/hidro",
+    "schemes": [
+    "http"
+    ],
+    "produces": [
+    "application/json"
+    ],
+    "paths": {
+    "/alerta_count": {
+    "get": {
+    "description": "Retrieve records from hidro",
+    "produces": [
+    "application/json"
+    ],
+    "responses": {
+    "200": {
+    "description": "The queried record.",
+    "schema": {
+    "type": "object",
+    "properties": {
+    "items": {
+    "type": "array",
+    "items": {
+    "type": "object",
+    "properties": {
+    "classe_alerta": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "numero_registros": {
+    "$ref": "#/definitions/NUMBER"
+    }
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "parameters": []
+    }
+    },
+    "/chuva_ult/{codigo}": {
+    "get": {
+    "description": "Retrieve records from hidro",
+    "produces": [
+    "application/json"
+    ],
+    "responses": {
+    "200": {
+    "description": "The queried record.",
+    "schema": {
+    "type": "object",
+    "properties": {
+    "items": {
+    "type": "array",
+    "items": {
+    "type": "object",
+    "properties": {
+    "'soma_ult_leituras'": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "sum_chuva": {
+    "$ref": "#/definitions/NUMBER"
+    }
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "parameters": [
+    {
+    "name": "codigo",
+    "in": "path",
+    "required": true,
+    "type": "string",
+    "description": "implicit",
+    "pattern": "^[^/]+$"
+    }
+    ]
+    }
+    },
+    "/estacao/": {
+    "get": {
+    "description": "Retrieve records from hidro",
+    "produces": [
+    "application/json"
+    ],
+    "responses": {
+    "200": {
+    "description": "The queried record.",
+    "schema": {
+    "type": "object",
+    "properties": {
+    "items": {
+    "type": "array",
+    "items": {
+    "type": "object",
+    "properties": {
+    "$codigo": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "$leituras_24_horas": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "$leituras_30_dias": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "$leituras_365_dias": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "$leituras_7_dias": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "$leituras_chuva_anual": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "areadrenagem": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "bacia": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "climatologica": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "codigo": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "descargaliquida": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "escala": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "estado": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "latitude": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "longitude": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "municipio": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "nome": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "operadora": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "operando": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "periodoclimatologicainicio": {
+    "$ref": "#/definitions/DATE"
+    },
+    "periododescliquidainicio": {
+    "$ref": "#/definitions/DATE"
+    },
+    "periodoescalainicio": {
+    "$ref": "#/definitions/DATE"
+    },
+    "periodopluviometroinicio": {
+    "$ref": "#/definitions/DATE"
+    },
+    "periodoqualaguainicio": {
+    "$ref": "#/definitions/DATE"
+    },
+    "periodoregistradorchuvainicio": {
+    "$ref": "#/definitions/DATE"
+    },
+    "periodoregistradornivelinicio": {
+    "$ref": "#/definitions/DATE"
+    },
+    "periodosedimentosinicio": {
+    "$ref": "#/definitions/DATE"
+    },
+    "periodotanqueevapoinicio": {
+    "$ref": "#/definitions/DATE"
+    },
+    "periodotelemetricainicio": {
+    "$ref": "#/definitions/DATE"
+    },
+    "pluviometro": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "qualidadedaagua": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "registradorchuva": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "registradornivel": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "responsavel": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "rio": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "sedimentos": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "subbacia": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "tanqueevapo": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "telemetrica": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "tipoestacao": {
+    "$ref": "#/definitions/VARCHAR2"
+    }
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "parameters": []
+    }
+    },
+    "/estacao/24h/{codigo}": {
+    "get": {
+    "description": "Retrieve records from hidro",
+    "produces": [
+    "application/json"
+    ],
+    "responses": {
+    "200": {
+    "description": "The queried record.",
+    "schema": {
+    "type": "object",
+    "properties": {
+    "items": {
+    "type": "array",
+    "items": {
+    "type": "object",
+    "properties": {
+    "chuva": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "codigo": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "data": {
+    "$ref": "#/definitions/DATE"
+    },
+    "nivel": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "nivel_perm10": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "nivel_perm50": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "nivel_perm90": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "nivel_perm_max": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "nivel_perm_min": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "origem": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "vazao": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "vazao_perm10": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "vazao_perm50": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "vazao_perm90": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "vazao_perm_max": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "vazao_perm_min": {
+    "$ref": "#/definitions/NUMBER"
+    }
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "parameters": [
+    {
+    "name": "codigo",
+    "in": "path",
+    "required": true,
+    "type": "string",
+    "description": "implicit",
+    "pattern": "^[^/]+$"
+    }
+    ]
+    }
+    },
+    "/estacao/30d/{codigo}": {
+    "get": {
+    "description": "Retrieve records from hidro",
+    "produces": [
+    "application/json"
+    ],
+    "responses": {
+    "200": {
+    "description": "The queried record.",
+    "schema": {
+    "type": "object",
+    "properties": {
+    "items": {
+    "type": "array",
+    "items": {
+    "type": "object",
+    "properties": {
+    "chuva": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "codigo": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "data": {
+    "$ref": "#/definitions/DATE"
+    },
+    "nivel": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "nivel_perm10": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "nivel_perm50": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "nivel_perm90": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "nivel_perm_max": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "nivel_perm_min": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "origem": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "vazao": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "vazao_perm10": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "vazao_perm50": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "vazao_perm90": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "vazao_perm_max": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "vazao_perm_min": {
+    "$ref": "#/definitions/NUMBER"
+    }
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "parameters": [
+    {
+    "name": "codigo",
+    "in": "path",
+    "required": true,
+    "type": "string",
+    "description": "implicit",
+    "pattern": "^[^/]+$"
+    }
+    ]
+    }
+    },
+    "/estacao/365d/{codigo}": {
+    "get": {
+    "description": "Retrieve records from hidro",
+    "produces": [
+    "application/json"
+    ],
+    "responses": {
+    "200": {
+    "description": "The queried record.",
+    "schema": {
+    "type": "object",
+    "properties": {
+    "items": {
+    "type": "array",
+    "items": {
+    "type": "object",
+    "properties": {
+    "codigo": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "data": {
+    "$ref": "#/definitions/DATE"
+    },
+    "nivel": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "nivel_perm10": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "nivel_perm50": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "nivel_perm90": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "nivel_perm_max": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "nivel_perm_min": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "origem": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "vazao": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "vazao_perm10": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "vazao_perm50": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "vazao_perm90": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "vazao_perm_max": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "vazao_perm_min": {
+    "$ref": "#/definitions/NUMBER"
+    }
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "parameters": [
+    {
+    "name": "codigo",
+    "in": "path",
+    "required": true,
+    "type": "string",
+    "description": "implicit",
+    "pattern": "^[^/]+$"
+    }
+    ]
+    }
+    },
+    "/estacao/7d/{codigo}": {
+    "get": {
+    "description": "Retrieve records from hidro",
+    "produces": [
+    "application/json"
+    ],
+    "responses": {
+    "200": {
+    "description": "The queried record.",
+    "schema": {
+    "type": "object",
+    "properties": {
+    "items": {
+    "type": "array",
+    "items": {
+    "type": "object",
+    "properties": {
+    "chuva": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "codigo": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "data": {
+    "$ref": "#/definitions/DATE"
+    },
+    "nivel": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "nivel_perm10": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "nivel_perm50": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "nivel_perm90": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "nivel_perm_max": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "nivel_perm_min": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "origem": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "vazao": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "vazao_perm10": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "vazao_perm50": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "vazao_perm90": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "vazao_perm_max": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "vazao_perm_min": {
+    "$ref": "#/definitions/NUMBER"
+    }
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "parameters": [
+    {
+    "name": "codigo",
+    "in": "path",
+    "required": true,
+    "type": "string",
+    "description": "implicit",
+    "pattern": "^[^/]+$"
+    }
+    ]
+    }
+    },
+    "/estacao/ano/{codigo}": {
+    "get": {
+    "description": "Retrieve records from hidro",
+    "produces": [
+    "application/json"
+    ],
+    "responses": {
+    "200": {
+    "description": "The queried record.",
+    "schema": {
+    "type": "object",
+    "properties": {
+    "items": {
+    "type": "array",
+    "items": {
+    "type": "object",
+    "properties": {
+    "chuva": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "chuva_perm10": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "chuva_perm50": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "chuva_perm90": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "codigo": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "data": {
+    "$ref": "#/definitions/DATE"
+    },
+    "origem": {
+    "$ref": "#/definitions/VARCHAR2"
+    }
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "parameters": [
+    {
+    "name": "codigo",
+    "in": "path",
+    "required": true,
+    "type": "string",
+    "description": "implicit",
+    "pattern": "^[^/]+$"
+    }
+    ]
+    }
+    },
+    "/estacao/{codigo}": {
+    "get": {
+    "description": "Retrieve records from hidro",
+    "produces": [
+    "application/json"
+    ],
+    "responses": {
+    "200": {
+    "description": "The queried record.",
+    "schema": {
+    "type": "object",
+    "properties": {
+    "items": {
+    "type": "array",
+    "items": {
+    "type": "object",
+    "properties": {
+    "$leituras_24_horas": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "$leituras_30_dias": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "$leituras_365_dias": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "$leituras_7_dias": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "$leituras_chuva_anual": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "areadrenagem": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "bacia": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "climatologica": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "codigo": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "descargaliquida": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "escala": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "estado": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "latitude": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "longitude": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "municipio": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "nome": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "operadora": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "operando": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "periodoclimatologicainicio": {
+    "$ref": "#/definitions/DATE"
+    },
+    "periododescliquidainicio": {
+    "$ref": "#/definitions/DATE"
+    },
+    "periodoescalainicio": {
+    "$ref": "#/definitions/DATE"
+    },
+    "periodopluviometroinicio": {
+    "$ref": "#/definitions/DATE"
+    },
+    "periodoqualaguainicio": {
+    "$ref": "#/definitions/DATE"
+    },
+    "periodoregistradorchuvainicio": {
+    "$ref": "#/definitions/DATE"
+    },
+    "periodoregistradornivelinicio": {
+    "$ref": "#/definitions/DATE"
+    },
+    "periodosedimentosinicio": {
+    "$ref": "#/definitions/DATE"
+    },
+    "periodotanqueevapoinicio": {
+    "$ref": "#/definitions/DATE"
+    },
+    "periodotelemetricainicio": {
+    "$ref": "#/definitions/DATE"
+    },
+    "pluviometro": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "qualidadedaagua": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "registradorchuva": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "registradornivel": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "responsavel": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "rio": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "sedimentos": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "subbacia": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "tanqueevapo": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "telemetrica": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "tipoestacao": {
+    "$ref": "#/definitions/VARCHAR2"
+    }
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "parameters": [
+    {
+    "name": "codigo",
+    "in": "path",
+    "required": true,
+    "type": "string",
+    "description": "implicit",
+    "pattern": "^[^/]+$"
+    }
+    ]
+    }
+    },
+    "/estacao_alerta/{codigo}": {
+    "get": {
+    "description": "Retrieve records from hidro",
+    "produces": [
+    "application/json"
+    ],
+    "responses": {
+    "200": {
+    "description": "The queried record.",
+    "schema": {
+    "type": "object",
+    "properties": {
+    "items": {
+    "type": "array",
+    "items": {
+    "type": "object",
+    "properties": {
+    "codigo": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "tipo_alerta": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "tipo_sensor": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "valor_referencia": {
+    "$ref": "#/definitions/NUMBER"
+    }
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "parameters": [
+    {
+    "name": "codigo",
+    "in": "path",
+    "required": true,
+    "type": "string",
+    "description": "implicit",
+    "pattern": "^[^/]+$"
+    }
+    ]
+    }
+    },
+    "/mapa/": {
+    "get": {
+    "description": "Retrieve records from hidro",
+    "produces": [
+    "application/json"
+    ],
+    "responses": {
+    "200": {
+    "description": "The queried record.",
+    "schema": {
+    "type": "object",
+    "properties": {
+    "items": {
+    "type": "array",
+    "items": {
+    "type": "object",
+    "properties": {
+    "$codigo": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "bacia": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "classe_alerta": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "classe_permanencia": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "codigo": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "data_ult": {
+    "$ref": "#/definitions/DATE"
+    },
+    "estado": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "id": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "latitude": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "longitude": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "municipio": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "nivel_perm_10": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "nivel_perm_90": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "nivel_ult": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "nome": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "operadora": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "responsavel": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "rio": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "subbacia": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "tipoestacao": {
+    "$ref": "#/definitions/VARCHAR2"
+    }
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "parameters": []
+    }
+    },
+    "/mapa/flu": {
+    "get": {
+    "description": "Retrieve records from hidro",
+    "produces": [
+    "application/json"
+    ],
+    "responses": {
+    "200": {
+    "description": "The queried record.",
+    "schema": {
+    "type": "object",
+    "properties": {
+    "items": {
+    "type": "array",
+    "items": {
+    "type": "object",
+    "properties": {
+    "$codigo": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "bacia": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "classe_alerta": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "classe_permanencia": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "codigo": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "data_ult": {
+    "$ref": "#/definitions/DATE"
+    },
+    "estado": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "id": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "latitude": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "longitude": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "municipio": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "nivel_perm_10": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "nivel_perm_90": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "nivel_ult": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "nome": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "operadora": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "responsavel": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "rio": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "subbacia": {
+    "$ref": "#/definitions/VARCHAR2"
+    }
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "parameters": []
+    }
+    },
+    "/mapa/plu": {
+    "get": {
+    "description": "Retrieve records from hidro",
+    "produces": [
+    "application/json"
+    ],
+    "responses": {
+    "200": {
+    "description": "The queried record.",
+    "schema": {
+    "type": "object",
+    "properties": {
+    "items": {
+    "type": "array",
+    "items": {
+    "type": "object",
+    "properties": {
+    "$codigo": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "bacia": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "classe_alerta": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "classe_permanencia": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "codigo": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "data_ult": {
+    "$ref": "#/definitions/DATE"
+    },
+    "estado": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "id": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "latitude": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "longitude": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "municipio": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "nivel_perm_10": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "nivel_perm_90": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "nivel_ult": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "nome": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "operadora": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "responsavel": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "rio": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "subbacia": {
+    "$ref": "#/definitions/VARCHAR2"
+    }
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "parameters": []
+    }
+    },
+    "/mapa/v2": {
+    "get": {
+    "description": "Retrieve records from hidro",
+    "produces": [
+    "application/json"
+    ],
+    "responses": {
+    "200": {
+    "description": "The queried record.",
+    "schema": {
+    "type": "object",
+    "properties": {
+    "items": {
+    "type": "array",
+    "items": {
+    "type": "object",
+    "properties": {
+    "dummy": {
+    "$ref": "#/definitions/VARCHAR2"
+    }
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "parameters": []
+    }
+    },
+    "/mapa/{codigo}": {
+    "get": {
+    "description": "Retrieve records from hidro",
+    "produces": [
+    "application/json"
+    ],
+    "responses": {
+    "200": {
+    "description": "The queried record.",
+    "schema": {
+    "type": "object",
+    "properties": {
+    "items": {
+    "type": "array",
+    "items": {
+    "type": "object",
+    "properties": {
+    "bacia": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "chuva_ult": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "codigo": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "data_ult": {
+    "$ref": "#/definitions/DATE"
+    },
+    "estado": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "latitude": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "longitude": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "municipio": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "nivel_ult": {
+    "$ref": "#/definitions/NUMBER"
+    },
+    "nome": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "operadora": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "responsavel": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "rio": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "subbacia": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "tipoestacao": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "vazao_ult": {
+    "$ref": "#/definitions/NUMBER"
+    }
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "parameters": [
+    {
+    "name": "codigo",
+    "in": "path",
+    "required": true,
+    "type": "string",
+    "description": "implicit",
+    "pattern": "^[^/]+$"
+    }
+    ]
+    }
+    },
+    "/permanencia_count": {
+    "get": {
+    "description": "Retrieve records from hidro",
+    "produces": [
+    "application/json"
+    ],
+    "responses": {
+    "200": {
+    "description": "The queried record.",
+    "schema": {
+    "type": "object",
+    "properties": {
+    "items": {
+    "type": "array",
+    "items": {
+    "type": "object",
+    "properties": {
+    "classe_permanencia": {
+    "$ref": "#/definitions/VARCHAR2"
+    },
+    "numero_registros": {
+    "$ref": "#/definitions/NUMBER"
+    }
+    }
+    }
+    }
+    }
+    }
+    }
+    },
+    "parameters": []
+    }
+    }
+    },
+    "definitions": {
+    "DATE": {
+    "type": "string",
+    "format": "date-time",
+    "pattern": "^\\d{4}-[01]\\d-[0123]\\dT[012]\\d:[0-5]\\d:[0-5]\\d(.\\d+)?(Z|([-+][012]\\d:[0-5]\\d))$"
+    },
+    "NUMBER": {
+    "type": "number"
+    },
+    "VARCHAR2": {
+    "type": "string"
+    }
+    }
+    }
