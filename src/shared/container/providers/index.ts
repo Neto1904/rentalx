@@ -22,8 +22,8 @@ container.registerInstance<IMailProvider>(
 )
 
 const diskStorage = {
-  local: LocalStorageProvider,
-  s3: S3StorageProvider,
+  local: container.resolve(LocalStorageProvider),
+  s3: container.resolve(S3StorageProvider),
 }
 
 container.registerSingleton<IStorageProvider>(

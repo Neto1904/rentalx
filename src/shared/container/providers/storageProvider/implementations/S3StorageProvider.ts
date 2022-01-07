@@ -2,11 +2,13 @@ import { S3 } from 'aws-sdk'
 import filesystem from 'fs'
 import mime from 'mime'
 import { resolve } from 'path'
+import { injectable } from 'tsyringe'
 
 import upload from '@config/upload'
 
 import { IStorageProvider } from '../IStorageProvider'
 
+@injectable()
 export class S3StorageProvider implements IStorageProvider {
   private client: S3
 

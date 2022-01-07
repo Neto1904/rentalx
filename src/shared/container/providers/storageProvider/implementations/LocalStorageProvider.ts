@@ -1,10 +1,12 @@
 import filesystem from 'fs'
 import { resolve } from 'path'
+import { injectable } from 'tsyringe'
 
 import upload from '@config/upload'
 
 import { IStorageProvider } from '../IStorageProvider'
 
+@injectable()
 export class LocalStorageProvider implements IStorageProvider {
   async save(file: string, folder: string): Promise<string> {
     filesystem.promises.rename(
