@@ -1,3 +1,4 @@
+import cors from 'cors'
 import express from 'express'
 import 'express-async-errors'
 import swagger from 'swagger-ui-express'
@@ -16,6 +17,7 @@ app.use(express.json())
 app.use('/api-docs', swagger.serve, swagger.setup(swaggerFile))
 app.use('/avatar', express.static(`${upload.folder}/avatar`))
 app.use('/cars', express.static(`${upload.folder}/cars`))
+app.use(cors())
 app.use(routes)
 app.use(checkError)
 
