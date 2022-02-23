@@ -1,6 +1,8 @@
 # Rentx
 
-<img src="rentx.png" alt="Rentx logo" height="50" position="center">
+<p align="center">
+  <img src="rentx.png" alt="Rentx logo" height="50">
+</p>
 
 > API REST de uma locadora de carros
 
