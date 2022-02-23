@@ -4,7 +4,7 @@
   <img src="rentx.png" alt="Rentx logo" height="50">
 </p>
 
-> API REST de uma locadora de carros
+> API REST de um sistema de locação de veículos
 
 ## Informações sobre a aplicação
 
