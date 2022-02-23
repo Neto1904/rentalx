@@ -8,18 +8,6 @@
 
 ## Informações sobre a aplicação
 
-## Tecnologias
-
-As seguintes tecnologias foram utilizadas no projeto:
-
-- [TypeScript](https://www.typescriptlang.org/)
-- [PostgreSQL](https://www.postgresql.org/)
-- [Docker](https://www.docker.com/)
-- [Redis](https://redis.io/)
-- [Amazon SES](https://aws.amazon.com/pt/ses/)
-- [Amazon S3](https://aws.amazon.com/pt/s3/)
-- [Amazon EC2](https://aws.amazon.com/pt/ec2)
-
 ## Executando o projeto
 
 - Copie o arquivo de ambiente e preencha as variáveis:
@@ -46,3 +34,15 @@ As seguintes tecnologias foram utilizadas no projeto:
   ```bash
     docker-compose up -d
   ```
+
+## Tecnologias
+
+As seguintes tecnologias foram utilizadas no projeto:
+
+- [TypeScript](https://www.typescriptlang.org/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Docker](https://www.docker.com/)
+- [Redis](https://redis.io/)
+- [Amazon SES](https://aws.amazon.com/pt/ses/)
+- [Amazon S3](https://aws.amazon.com/pt/s3/)
+- [Amazon EC2](https://aws.amazon.com/pt/ec2)
